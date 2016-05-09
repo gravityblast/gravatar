@@ -6,7 +6,7 @@ Gravatar URLs module for Elixir.
 
 ```elixir
 def deps do
-  [{:gravatar, "~> 0.0.1"}]
+  [{:gravatar, "~> 0.1.0"}]
 end
 ```
 
