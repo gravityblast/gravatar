@@ -32,6 +32,8 @@ Gravatar.new("test@example.com")
 # "https://www.gravatar.com/avatar/55502f40dc8b7c769880b10874abc9d0?s=500"
 ```
 
+Check the [online documentation](https://hexdocs.pm/gravatar/) for more information.
+
 ## Author
 
 * [Andrea Franz](http://gravityblast.com)
