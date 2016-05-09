@@ -6,21 +6,30 @@ Gravatar URLs module for Elixir.
 
 ```elixir
 def deps do
-  [{:gravatar, "~> 0.0.1"}]
+  [{:gravatar, "~> 0.1.0"}]
 end
 ```
 
 ## Usage
 
 ```elixir
-iex(1)> Gravatar.new("test@example.com") |> to_string
-"http://www.gravatar.com/avatar/55502f40dc8b7c769880b10874abc9d0"
+Gravatar.new("test@example.com")
+|> to_string
 
-iex(2)> Gravatar.new("test@example.com") |> Gravatar.size(500) |> to_string
-"http://www.gravatar.com/avatar/55502f40dc8b7c769880b10874abc9d0?s=500"
+# "http://www.gravatar.com/avatar/55502f40dc8b7c769880b10874abc9d0"
 
-iex(3)> Gravatar.new("test@example.com") |> Gravatar.size(500) |> Gravatar.secure |> to_string
-"https://www.gravatar.com/avatar/55502f40dc8b7c769880b10874abc9d0?s=500"
+Gravatar.new("test@example.com")
+|> Gravatar.size(500)
+|> to_string
+
+# "http://www.gravatar.com/avatar/55502f40dc8b7c769880b10874abc9d0?s=500"
+
+Gravatar.new("test@example.com")
+|> Gravatar.size(500)
+|> Gravatar.secure
+|> to_string
+
+# "https://www.gravatar.com/avatar/55502f40dc8b7c769880b10874abc9d0?s=500"
 ```
 
 ## Author

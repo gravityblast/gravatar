@@ -1,13 +1,32 @@
 defmodule Gravatar.Mixfile do
   use Mix.Project
 
+
   def project do
     [app: :gravatar,
-     version: "0.0.1",
+     version: "0.1.0",
      elixir: "~> 1.2",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description,
+     package: package,
      deps: deps]
+  end
+
+  defp description do
+    """
+      Gravatar URLs generator
+    """
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README.md"],
+      maintainers: ["Andrea Franz"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/pilu/gravatar",
+        "Docs" => "http://hexdocs.pm/gravatar/"}
+    ]
   end
 
   # Configuration for the OTP application
